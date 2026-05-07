@@ -113,4 +113,4 @@ streamlit run app.py
 
 ## Author
 
-**Shivansh Gupta**
+**Shivansh Gupta** , **Sada Kakarla**

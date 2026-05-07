@@ -60,13 +60,14 @@ TFT advantages over vanilla LSTM:
 
 ---
 
-## Notebooks
+## Notebooks & App
 
-| Notebook | Description |
-|----------|-------------|
+| File | Description |
+|------|-------------|
 | `Data_EDA.ipynb` | Exploratory analysis — distributions, correlations, seasonal patterns |
 | `Data_preprocess.ipynb` | Filtering, weather merging, imputation, export |
 | `transformer_train.ipynb` | TFT + LSTM training, evaluation, attention interpretation |
+| `app.py` | Streamlit dashboard — interactive forecast + anomaly detection |
 
 ---
 
@@ -81,15 +82,13 @@ TFT advantages over vanilla LSTM:
 ## Setup
 
 ```bash
-git clone https://github.com/yourusername/PowerSight.git
+git clone https://github.com/shivansh052k/PowerSight.git
 cd PowerSight
 
 conda create -n powersight python=3.12
 conda activate powersight
 
-pip install pandas numpy scikit-learn torch pytorch-lightning \
-            pytorch-forecasting lightning xgboost optuna \
-            statsmodels captum shap matplotlib joblib
+pip install -r requirements.txt
 ```
 
 Download the OPSD dataset and place it at:
@@ -98,11 +97,17 @@ Download the OPSD dataset and place it at:
 Dataset/time_series_60min_singleindex.csv
 ```
 
+Launch dashboard:
+
+```bash
+streamlit run app.py
+```
+
 ---
 
 ## Tech Stack
 
-`Python` · `PyTorch` · `PyTorch Lightning` · `PyTorch Forecasting` · `pandas` · `scikit-learn` · `XGBoost` · `Optuna` · `SHAP` · `Open-Meteo API`
+`Python` · `PyTorch` · `PyTorch Lightning` · `PyTorch Forecasting` · `pandas` · `scikit-learn` · `XGBoost` · `Optuna` · `SHAP` · `Streamlit` · `Plotly` · `Open-Meteo API`
 
 ---
 
